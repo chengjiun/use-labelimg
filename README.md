@@ -2,6 +2,7 @@
 - see https://github.com/tzutalin/labelImg.git
 
 ## environment setup
+
 ```
 sudo apt-get install pyqt5-dev-tools
 conda create -n labelImg-tools -c conda-forge python=3.7
@@ -29,3 +30,10 @@ python3 labelImg.py
 - create new box: w
 - delete box: Delete
 - delete image: Ctrl Shift d 
+
+# execuation
+- put data to ./data/images\
+- class list (coco80.txt) in ./
+```
+python labelImg/labelImg.py ./data/images ./coco80.txt ./data/label
+```
