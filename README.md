@@ -1,3 +1,6 @@
+# A Note to use labelImg
+- see https://github.com/tzutalin/labelImg.git
+
 ## environment setup
 ```
 sudo apt-get install pyqt5-dev-tools
@@ -10,7 +13,8 @@ make qt5py3
 python3 labelImg.py
 ```
 
-# Note
+# AUX
+
 ## view tab
 
 - autosaving mode
