@@ -140,14 +140,14 @@ class YoloReader:
     def parseYoloFormat(self):
         bndBoxFile = open(self.filepath, "r")
         for bndBox in bndBoxFile:
-            classIndex, xcen, ycen, w, h = bndBox.strip().split(" ")
-            if int(classIndex) > len(self.classes):
-                # set classIndex to an arbitrary value when it exceed the list
-                # NEED TO MAKE SURE THE ID IS CORRECT MANUALLY
-                classIndex = "2"
-            label, xmin, ymin, xmax, ymax = self.yoloLine2Shape(
-                classIndex, xcen, ycen, w, h
-            )
+            try:
+                classIndex, xcen, ycen, w, h = bndBox.strip().split(" ")
+                label, xmin, ymin, xmax, ymax = self.yoloLine2Shape(
+                    classIndex, xcen, ycen, w, h
+                )
+            except:
+                print("wrong file", self.filepath)
+                raise
 
             # Caveat: difficult flag is discarded when saved as yolo format.
             self.addShape(label, xmin, ymin, xmax, ymax, False)

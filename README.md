@@ -1,6 +1,9 @@
 # A Note to use labelImg
 - see https://github.com/tzutalin/labelImg.git
 
+## modification of labelImg
+1. ignore classes in the label txt file if its classIndex exceed the label list. This is helpful to pre-annotate COCO classes with pretrained models, and then remove the unnecessary labels. 
+
 ## environment setup
 
 ```
