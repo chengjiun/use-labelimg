@@ -6,16 +6,7 @@
 
 ## environment setup
 
-```
-sudo apt-get install pyqt5-dev-tools
-conda create -n labelImg-tools -c conda-forge python=3.7
-conda activate labelImg-tools
-git clone https://github.com/tzutalin/labelImg.git
-cd labelImg
-pip install -r requirements/requirements-linux-python3.txt
-make qt5py3
-python3 labelImg.py
-```
+- use conda_install_labelImgtools.sh
 
 # AUX
 

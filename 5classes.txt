@@ -1,0 +1,5 @@
+person
+cell phone
+drink
+mask
+pen
